@@ -1,0 +1,81 @@
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 12px">
+  <div style="background: linear-gradient(135deg, #1a73e8 0%, #1557b0 100%); padding: 20px; border-radius: 8px 8px 0 0; color: white;">
+    <h2 style="margin: 0; font-size: 20px;">📧 New Contact Form Submission</h2>
+    <p style="margin: 5px 0 0 0; font-size: 14px; opacity: 0.9;">ARSHED & SONS ENTERPRISES</p>
+  </div>
+
+  <div style="background: #f8f9fa; padding: 20px; border-radius: 0 0 8px 8px;">
+    <div style="color: #2c3e50; font-size: 14px; margin-bottom: 20px;">
+      You have received a new message from your website contact form. Kindly respond at your earliest convenience.
+    </div>
+
+    <div
+      style="
+        margin-top: 20px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      "
+    >
+      <table role="presentation" style="width: 100%;">
+        <tr>
+          <td style="vertical-align: top; width: 60px;">
+            <div
+              style="
+                padding: 12px;
+                background: linear-gradient(135deg, #1a73e8, #34a853);
+                border-radius: 50%;
+                font-size: 28px;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+              "
+              role="img"
+            >
+              👤
+            </div>
+          </td>
+          <td style="vertical-align: top; padding-left: 15px;">
+            <div style="color: #2c3e50; font-size: 18px; font-weight: bold; margin-bottom: 5px;">
+              {{user_name}}
+            </div>
+            <div style="color: #5f6368; font-size: 13px; margin-bottom: 15px;">
+              📧 {{user_email}} | 📞 {{user_phone}}
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      <div style="margin-top: 20px; padding-top: 20px; border-top: 2px dashed #e0e0e0;">
+        <div style="color: #2c3e50; font-size: 14px; font-weight: bold; margin-bottom: 10px;">
+          Message:
+        </div>
+        <p style="font-size: 16px; color: #202124; line-height: 1.6; margin: 0; white-space: pre-wrap;">
+          {{message}}
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px; padding: 15px; background: #e8f0fe; border-radius: 8px; border-left: 4px solid #1a73e8;">
+      <div style="color: #1a73e8; font-size: 12px; font-weight: bold; margin-bottom: 5px;">
+        💡 Quick Actions:
+      </div>
+      <div style="color: #5f6368; font-size: 12px;">
+        • Reply directly to this email to respond to: <strong>{{user_email}}</strong><br>
+        • Call the customer at: <strong>{{user_phone}}</strong>
+      </div>
+    </div>
+
+    <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #e0e0e0; text-align: center;">
+      <div style="color: #999; font-size: 11px;">
+        This email was automatically sent from your website contact form.<br>
+        ARSHED & SONS ENTERPRISES - Chemical Suppliers | Faisalabad, Pakistan
+      </div>
+    </div>
+  </div>
+</div>
+

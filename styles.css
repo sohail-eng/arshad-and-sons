@@ -504,15 +504,133 @@ section {
     font-weight: 600;
     color: var(--text-dark);
     transition: var(--transition);
+    line-height: 1.4;
+}
+
+.chemical-sub {
+    font-size: 0.9rem;
+    font-weight: 400;
+    display: block;
+    margin-top: 0.3rem;
+    opacity: 0.85;
 }
 
 .chemical-card:hover h3 {
     color: white;
 }
 
+.chemical-card:hover .chemical-sub {
+    opacity: 0.9;
+}
+
 /* ===== Contact Section ===== */
 .contact {
     background: var(--bg-light);
+}
+
+.contact-form-container {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.contact-form-wrapper {
+    background: var(--bg-white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.form-title {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.required {
+    color: var(--accent-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+    background: var(--bg-white);
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit-btn {
+    width: 100%;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.form-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    display: none;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
 }
 
 .map-container {
@@ -972,6 +1090,19 @@ section {
 
     .map-wrapper iframe {
         height: 300px;
+    }
+
+    .contact-form-wrapper {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-title {
+        font-size: 1.3rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
     }
 
     .btn {

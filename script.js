@@ -242,6 +242,68 @@ window.addEventListener('error', (e) => {
     console.error('An error occurred:', e.error);
 });
 
+// ===== Contact Form with EmailJS =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS
+    // You need to replace these with your own EmailJS credentials
+    // Get them from https://www.emailjs.com/
+    // IMPORTANT: Replace "YOUR_PUBLIC_KEY" with your actual EmailJS Public Key
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init("o9BBR-QqW7X74jb2c"); // Replace with your EmailJS Public Key
+    }
+    
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Check if EmailJS is configured
+            if (typeof emailjs === 'undefined') {
+                formMessage.className = 'form-message error';
+                formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> EmailJS is not configured. Please set up your EmailJS credentials in script.js';
+                formMessage.style.display = 'block';
+                return;
+            }
+            
+            const submitBtn = contactForm.querySelector('.form-submit-btn');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            formMessage.style.display = 'none';
+            
+            // Send email using EmailJS
+            // IMPORTANT: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+            emailjs.sendForm('service_zcczpxh', 'template_92glpkh', contactForm)
+                .then(function() {
+                    // Success
+                    formMessage.className = 'form-message success';
+                    formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. We will get back to you soon.';
+                    formMessage.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Scroll to message
+                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, function(error) {
+                    // Error
+                    formMessage.className = 'form-message error';
+                    formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact us directly.';
+                    formMessage.style.display = 'block';
+                    
+                    console.error('EmailJS Error:', error);
+                })
+                .finally(function() {
+                    // Re-enable submit button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                });
+        });
+    }
+});
+
 // ===== Console Welcome Message =====
 console.log('%cARSHED & SONS ENTERPRISES', 'color: #1a73e8; font-size: 20px; font-weight: bold;');
 console.log('%cYour trusted partner for quality chemical solutions', 'color: #5f6368; font-size: 12px;');

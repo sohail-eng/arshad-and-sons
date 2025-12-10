@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -67,7 +68,7 @@
             <div class="about-wrapper">
                 <div class="about-text">
                     <p class="about-intro">
-                        It is stated that we deal in <strong>General Chemicals & Equipment from Last 9 years</strong>. We have earned the trust & confidence of our valued customers by not providing them any chance to have complaints from our company. Our company acknowledged for its credit.
+                        It is stated that we deal in <strong>General Chemicals from Last 9 years</strong>. We have earned the trust & confidence of our valued customers by not providing them any chance to have complaints from our company. Our company acknowledged for its credit.
                     </p>
                     <div class="goals-section">
                         <h3>Our Goals:</h3>
@@ -140,55 +141,55 @@
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Sulfuric Acid (H₂SO₄)</h3>
+                    <h3>Sulfuric Acid<br><span class="chemical-sub">(H₂SO₄)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Sodium Hydro Sulfite (China)</h3>
+                    <h3>Sodium Hydro Sulfite<br><span class="chemical-sub">(China)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Nitric Acid (HNO₃)</h3>
+                    <h3>Nitric Acid<br><span class="chemical-sub">(HNO₃)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Hydrochloric Acid (HCL)</h3>
+                    <h3>Hydrochloric Acid<br><span class="chemical-sub">(HCL)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Caustic Soda / Flakes (NaOH)</h3>
+                    <h3>Caustic Soda / Flakes<br><span class="chemical-sub">(NaOH)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Oxalic Acid (China)</h3>
+                    <h3>Caustic Soda / Liquid<br><span class="chemical-sub">(NaOH)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Sodium Sulfate China (Glaber Salt)</h3>
+                    <h3>Oxalic Acid<br><span class="chemical-sub">(China)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Caustic Soda / Liquid (NaOH)</h3>
+                    <h3>Sodium Sulfate China<br><span class="chemical-sub">(Glaber Salt)</span></h3>
                 </div>
                 <div class="chemical-card">
                     <div class="chemical-icon">
                         <i class="fas fa-flask"></i>
                     </div>
-                    <h3>Acetic Acid (Korea + Taiwan)</h3>
+                    <h3>Acetic Acid<br><span class="chemical-sub">(Korea + Taiwan)</span></h3>
                 </div>
             </div>
         </div>
@@ -216,7 +217,6 @@
                     </div>
                     <h3>Phone</h3>
                     <a href="tel:03012131874">0301-2131874</a>
-                    <a href="tel:03018664580" class="contact-secondary">0301-8664580</a>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
@@ -232,6 +232,33 @@
                     </div>
                     <h3>Address</h3>
                     <p>P-15, ROSE VALLEY<br>AMIN TOWN, FAISALABAD</p>
+                </div>
+            </div>
+            <div class="contact-form-container">
+                <div class="contact-form-wrapper">
+                    <h3 class="form-title">Send us a Message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="user_name">Name <span class="required">*</span></label>
+                            <input type="text" id="user_name" name="user_name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_email">Email <span class="required">*</span></label>
+                            <input type="email" id="user_email" name="user_email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="user_phone">Phone <span class="required">*</span></label>
+                            <input type="tel" id="user_phone" name="user_phone" required placeholder="0301-1234567">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
                 </div>
             </div>
             <div class="map-container">
@@ -330,7 +357,6 @@
                     <h4>Contact Info</h4>
                     <ul>
                         <li><i class="fas fa-phone"></i> 0301-2131874</li>
-                        <li><i class="fas fa-phone"></i> 0301-8664580</li>
                         <li><i class="fas fa-envelope"></i> saifullahjutt8@gmail.com</li>
                         <li><i class="fas fa-envelope"></i> Arshedsons@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Faisalabad, Pakistan</li>

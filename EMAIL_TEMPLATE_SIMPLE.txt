@@ -1,0 +1,34 @@
+==========================================
+📧 NEW CONTACT FORM SUBMISSION
+ARSHED & SONS ENTERPRISES
+==========================================
+
+You have received a new message from your website contact form. 
+Kindly respond at your earliest convenience.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+👤 CONTACT INFORMATION
+
+Name: {{user_name}}
+Email: {{user_email}}
+Phone: {{user_phone}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💬 MESSAGE
+
+{{message}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 QUICK ACTIONS:
+• Reply directly to this email to respond to: {{user_email}}
+• Call the customer at: {{user_phone}}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This email was automatically sent from your website contact form.
+ARSHED & SONS ENTERPRISES - Chemical Suppliers
+Faisalabad, Pakistan
+

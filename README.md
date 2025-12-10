@@ -196,7 +196,7 @@ The website includes:
 
 For any issues or questions:
 - Email: Arshedsons@gmail.com
-- Phone: 0301-8664580
+- Phone: 0301-2131874
 
 ## License
 
